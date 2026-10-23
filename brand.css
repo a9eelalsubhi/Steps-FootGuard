@@ -1,0 +1,19 @@
+/* Shared bilingual brand revision: original logo, restrained clinical geometry. */
+#stage{isolation:isolate}
+#stage::after{content:'';position:absolute;inset:0;background:url('assets/ambient-brand.svg') center/100% 100% no-repeat;pointer-events:none;z-index:-1}
+.hero-copy{top:98px;width:610px}
+.hero-brand-lockup{display:flex;align-items:center;gap:22px;margin:22px 0 28px}
+.hero-brand-logo{width:214px;height:224px;object-fit:contain;flex:0 0 214px;filter:drop-shadow(0 8px 10px #123d4512)}
+.hero-copy .hero-brand-lockup h1,html[lang=en] .hero-copy .hero-brand-lockup h1{font-family:Thmanyah,Arial,sans-serif;font-size:100px;line-height:1.06;letter-spacing:-4px;margin:0}
+.hero-copy .hero-brand-lockup h1 em,html[lang=en] .hero-copy .hero-brand-lockup h1 em{font-family:Thmanyah,Arial,sans-serif;font-size:35px;letter-spacing:-1px;margin-top:14px}
+html[lang=ar] .hero-copy .hero-brand-lockup h1{font-size:108px;letter-spacing:0}
+html[lang=ar] body,html[lang=ar] button,html[lang=ar] dialog{font-family:Thmanyah,Arial,sans-serif}
+.hero-copy .hero-description{font-size:27px;line-height:1.5}
+.hero-copy .hero-process{margin:27px 0}
+.hero-brand-lockup{animation:reveal .9s ease-out both}
+.reduced .hero-brand-lockup{animation:none}
+/* One outlined bilingual wordmark, identical in either language and at any resolution. */
+.brand{gap:11px;flex-shrink:0}
+.brand .brand-wordmark{width:190px;height:auto;max-width:none;display:block;object-fit:contain}
+.brand .brand-emblem{width:38px;height:42px;object-fit:contain}
+@media(max-width:600px){.brand{gap:7px}.brand .brand-wordmark{width:142px;height:auto}.brand .brand-emblem{width:28px;height:32px}}
