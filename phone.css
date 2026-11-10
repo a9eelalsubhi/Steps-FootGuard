@@ -1,0 +1,65 @@
+/* Phone reading mode: on narrow portrait screens the 1440×810 stage is no longer scaled down.
+   Each scene reflows into a vertical page with readable type, and the viewport scrolls. */
+body.phone #viewport{display:block;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0}
+body.phone #stage-wrap{width:auto!important;height:auto!important;position:static}
+body.phone #stage{position:relative;width:100%;height:auto;min-height:100%;transform:none!important;padding:22px 16px 48px;overflow:visible}
+body.phone #stage *{max-width:100%}
+body.phone #stage img{height:auto}
+
+/* every scene layout collapses to one column */
+body.phone #stage :is(.evidence-v2,.risk-layout,.science-layout,.problem-chain,.care-compare,.input-stream,.output-stream,
+  .hardware-v2,.device-explainer,.device-explorer-card,.prototype-layout,.how-top,.how-photo,.how-report,.specs-layout,
+  .inputs-cards,.processing-grid,.prototype-status,.outputs-layout,.audience-layout,.market-layout,.market-tier-main,
+  .business-model-grid,.business-channel-band,.pricing-layout,.roadmap-layout,.spec-row){
+  display:flex!important;flex-direction:column!important;gap:14px!important;grid-template-columns:none!important;height:auto!important}
+/* small grids keep two columns */
+body.phone #stage :is(.team,.chapters,.stats-grid,.value-grid,.considerations,.screens-grid,.action-categories){
+  display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;height:auto!important}
+body.phone #stage :is(.hero-process,.injury-metrics,.question-strip,.closing-actions,.business-channels,.unit-economics,
+  .audience-row,.science-row,.status-now,.status-future,.prototype-caption,.prototype-link,.cost-total,.spec-highlights){flex-wrap:wrap!important;gap:10px!important;height:auto!important}
+body.phone #stage [class]{grid-column:auto!important;grid-row:auto!important}
+
+/* pinned decorations become part of the flow, or step aside */
+body.phone #stage :is(.hero-copy,.hero-art,.hero-device,.source-line,.prevention-statement,.housing-note,.vision-line){
+  position:relative!important;inset:auto!important;transform:none!important;width:auto!important;height:auto!important;margin:0}
+body.phone #stage :is(.motion-orbit,.product-orbit,.flow-beam,.device-leaders,.motion-scan){display:none!important}
+body.phone #stage .hero-art{order:-1;margin:0 auto 6px;max-width:320px}
+body.phone #stage .source-line{display:block;margin-top:18px;font-size:11px}
+
+/* readable type */
+body.phone #stage .scene-heading{margin-bottom:16px}
+body.phone #stage .scene-heading h1{font-size:30px;line-height:1.25;letter-spacing:0}
+body.phone #stage .scene-heading>p{font-size:15px}
+body.phone #stage h1{font-size:30px;line-height:1.25}
+body.phone #stage h2{font-size:20px;line-height:1.35}
+body.phone #stage h3{font-size:17px;line-height:1.4}
+body.phone #stage :is(p,li,span,small,td,th,dd){font-size:max(13px,min(1em,15px));line-height:1.6}
+body.phone #stage table{display:block;overflow-x:auto;font-size:13px}
+body.phone #stage [data-count],body.phone #stage .stat b,body.phone #stage .metric b{font-size:34px}
+
+@media (prefers-reduced-motion: reduce){body.phone #stage *{animation:none!important}}
+
+/* scene fixes after the first phone pass */
+body.phone #stage.scene-1{display:flex;flex-direction:column;gap:18px}
+body.phone #stage .hero-copy{order:2}
+body.phone #stage .hero-brand-lockup{gap:12px;align-items:center}
+body.phone #stage .hero-brand-logo{width:70px!important;height:auto!important}
+body.phone #stage .hero-brand-lockup h1{font-size:44px;line-height:1.1}
+body.phone #stage .hero-brand-lockup h1 em{display:block;font-size:20px}
+body.phone #stage .hero-description{font-size:19px!important}
+body.phone #stage .hero-tagline{font-size:15px!important}
+body.phone #stage .hero-device{display:block;width:100%!important}
+body.phone #stage .input-card{height:auto!important;min-height:0!important;padding-bottom:18px}
+body.phone #stage .value-grid{grid-template-columns:1fr!important}
+body.phone #stage .value-item{height:auto!important}
+body.phone #stage .spec-row{gap:2px!important;padding-block:8px}
+/* comparison: keep the table, let it scroll sideways with the solution column pinned */
+body.phone #stage .comparison{overflow-x:auto;margin-inline:-16px;padding-inline:16px}
+body.phone #stage .comparison table{display:table;min-width:640px;font-size:12px}
+body.phone #stage .comparison :is(th,td):first-child{position:sticky;inset-inline-start:0;background:var(--paper,#eef4ef);z-index:1}
+body.phone #stage .comparison::after{content:'← اسحب لرؤية كل الأعمدة';display:block;font-size:12px;color:var(--muted);margin-top:8px}
+html[lang="en"] body.phone #stage .comparison::after{content:'Swipe to see all columns →'}
+body.phone #stage .hero-vertical{display:none}
+body.phone #stage .product-caption{position:static!important;transform:none!important;margin-top:6px}
+body.phone #stage :is(.value-item,.chapter,.person,.stat,.market-tier){min-height:0!important;height:auto!important}
+body.phone #stage .value-item{padding-block:16px}

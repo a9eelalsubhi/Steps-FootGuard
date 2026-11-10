@@ -1,0 +1,67 @@
+/* Live scan card on the cover */
+.scan-card{position:absolute;z-index:4;inset-inline-end:-4px;top:318px;width:236px;padding:14px 14px 12px;border-radius:22px;
+  background:#f7fbf8ee;border:1px solid #15727a22;box-shadow:0 24px 50px -18px #123d4559,0 2px 0 #fff inset;backdrop-filter:blur(6px);font-family:Thmanyah,sans-serif;color:var(--ink)}
+.scan-card-head{display:flex;align-items:center;gap:8px;font-size:13px;margin-bottom:6px}
+.scan-card-head b{font-size:14px;letter-spacing:.2px}
+.scan-card-head .scan-step{margin-inline-start:auto;color:var(--muted);font-size:12px}
+.scan-live{width:8px;height:8px;border-radius:50%;background:#e04a3a;box-shadow:0 0 0 0 #e04a3a88;animation:scanLive 1.6s infinite}
+@keyframes scanLive{70%{box-shadow:0 0 0 8px #e04a3a00}100%{box-shadow:0 0 0 0 #e04a3a00}}
+.scan-feet{display:block;width:100%;height:auto;border-radius:14px;background:#123d45;padding:6px 4px 0}
+.scan-feet .outline{stroke:#9fd8cf}
+.scan-feet .scan-beam{stroke:#ffcf5a;stroke-width:3;filter:drop-shadow(0 0 6px #ffb02e) drop-shadow(0 0 14px #ff9a1f);opacity:0}
+.scan-feet .risk-marker circle{fill:#ff3b2f}
+.scan-feet .risk-ring{fill:none!important;stroke:#ff3b2f;stroke-width:2.5}
+.scan-feet .foot-label{fill:#9fd8cf;font-size:12px;text-anchor:middle;font-family:Thmanyah,sans-serif}
+.scan-modes{display:flex;gap:4px;margin-top:9px}
+.scan-modes span{flex:1;text-align:center;font-size:12px;padding:5px 0;border-radius:20px;background:#e3efeb;color:var(--muted);transition:background .3s,color .3s}
+.scan-modes span.on{background:var(--ink);color:#fff}
+.scan-modes span[data-mode="result"].on{background:#c8392d}
+.scan-result{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .45s ease,opacity .45s ease,margin .45s ease}
+.scan-result>*{overflow:hidden}
+.scan-card.show-result .scan-result{grid-template-rows:auto;opacity:1;margin-top:9px;padding:8px 12px;border-radius:14px;background:#fbe7e3;border:1px solid #e0796b55}
+.scan-result b{color:#b9302a;font-size:15px}
+.scan-result span{font-size:12.5px;color:var(--ink)}
+.scan-result em{font-style:normal;font-size:12.5px;color:#b9302a;font-weight:700}
+.hero-process>div{transition:color .3s,transform .3s}
+.hero-process>div.scan-on{color:var(--teal);transform:translateY(-2px)}
+.hero-process>div.scan-on img{filter:drop-shadow(0 0 6px #08757766)}
+
+/* ΔT early-warning widget on the thermal scene */
+.dt-widget{display:flex;align-items:center;gap:22px;width:100%;margin-bottom:auto;padding:8px 0 4px}
+.dt-feet{width:150px;height:auto;flex-shrink:0;filter:drop-shadow(0 12px 18px #0006)}
+.dt-meter{flex:1;display:flex;flex-direction:column;gap:10px}
+.dt-read span{display:block;font-size:16px;opacity:.85;margin-bottom:4px}
+.dt-read b{font-size:54px;line-height:1;font-variant-numeric:tabular-nums}
+.dt-bar{position:relative;height:12px;border-radius:12px;background:#ffffff26;margin-bottom:18px}
+.dt-fill{position:absolute;inset-block:0;inset-inline-start:0;width:10%;border-radius:12px;background:linear-gradient(90deg,#1fb5a6,#f2c84b,#ff5a3c)}
+html[dir="rtl"] .dt-fill{background:linear-gradient(270deg,#1fb5a6,#f2c84b,#ff5a3c)}
+.dt-mark{position:absolute;top:-6px;bottom:-6px;inset-inline-start:var(--at);width:2px;background:#fff}
+.dt-mark em{position:absolute;top:22px;transform:translateX(50%);font-style:normal;font-size:12px;font-weight:700}
+.dt-alert{align-self:flex-start;white-space:nowrap;font-size:15px;font-weight:700;padding:6px 14px;border-radius:20px;background:#ff5a3c;color:#fff;opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s}
+.dt-widget.over .dt-alert{opacity:1;transform:none}
+.dt-widget.over .dt-read b{color:#ffb4a6}
+.thermal-motion .thermal-motion-scan{display:none}
+
+/* phones */
+body.phone #stage .scan-card{position:relative;inset:auto;width:100%;max-width:330px;margin:-30px auto 0}
+body.phone #stage .dt-widget{flex-direction:column}
+body.phone #stage .dt-feet{width:60%}
+@media print{.scan-card,.dt-widget .dt-alert{display:none}}
+
+/* data path on the solution scene */
+.data-path{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible}
+.solution-diagram>*:not(.data-path){position:relative;z-index:1}
+.dp-line{fill:none;stroke:#08757733;stroke-width:2;stroke-dasharray:4 6}
+.dp-line.out{stroke:#d5a64766}
+.dp-dot{fill:#d5a647;opacity:0;filter:drop-shadow(0 0 6px #d5a647)}
+
+/* comparison: our row */
+.comparison .our-row{transition:box-shadow .4s;border-radius:14px}
+
+/* walking route over the Hajj photo */
+.hajj-photo{position:relative}
+.hajj-route{position:absolute;inset:8% 6% 30%;pointer-events:none}
+.hajj-route svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.route-line{fill:none;stroke:#ffd166;stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-width:3.5;stroke-linecap:round;filter:drop-shadow(0 0 4px #0009)}
+.route-stop{position:absolute;transform:translate(-50%,-140%);font-size:13px;font-weight:700;color:#fff;background:#123d45cc;padding:2px 9px;border-radius:12px;white-space:nowrap}
+.route-walker{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#ffd166;box-shadow:0 0 0 4px #ffd16655,0 0 14px #ffb02e}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>خطاك STEPS · للمحكّمين</title>
+<meta name="description" content="كل ما يحتاجه المحكّم عن مشروع خطاك في صفحة واحدة: الفيديو، العرض التفاعلي، النموذج الأولي، وعارض الجهاز ثلاثي الأبعاد.">
+<meta property="og:title" content="خطاك STEPS · للمحكّمين">
+<meta property="og:description" content="محطة فحص وقائي ذكية للقدم قبل الإصابة — كل روابط المشروع في صفحة واحدة.">
+<meta property="og:image" content="https://a9eelalsubhi.github.io/Steps-FootGuard/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#123d45">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-title" content="خطاك"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<style>
+@font-face{font-family:TDisplay;src:url(assets/thmanyahserifdisplay-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:TText;src:url(assets/thmanyahseriftext-Regular.woff2) format('woff2');font-display:swap}
+@font-face{font-family:TText;src:url(assets/thmanyahseriftext-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:TSans;src:url(assets/thmanyahsans-Regular.woff2) format('woff2');font-display:swap}
+@font-face{font-family:TSans;src:url(assets/thmanyahsans-Medium.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:TSans;src:url(assets/thmanyahsans-Bold.woff2) format('woff2');font-weight:700;font-display:swap}
+:root{--ink:#123d45;--teal:#087577;--mint:#a5d4d2;--paper:#eef4ef;--gold:#d5a647;--muted:#3f6166;--line:#17646c22;--card:#ffffffcc}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:TText,serif;color:var(--ink);background:linear-gradient(160deg,#e3f2ea,#bcdcda);min-height:100vh;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;gap:12px;padding:18px 0}
+header.top img{width:40px}
+header.top b{font-family:TDisplay;font-size:22px}
+header.top span{font-family:TSans;font-size:13px;color:var(--muted);margin-inline-start:auto}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;padding:30px 0 50px}
+.eyebrow{font-family:TSans;font-weight:500;color:var(--teal);font-size:14px;letter-spacing:.3px}
+.hero h1{font-family:TDisplay;font-size:clamp(40px,7vw,72px);line-height:1.05;margin:10px 0 6px}
+.hero h1 em{display:block;font-style:normal;font-family:TSans;font-weight:700;font-size:.34em;color:var(--teal);letter-spacing:.5px;margin-top:8px}
+.hero p.lead{font-size:clamp(19px,2.4vw,24px);max-width:30ch}
+.hero p.tag{font-family:TSans;color:var(--muted);margin-top:6px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{font-family:TSans;font-weight:700;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:40px;background:var(--ink);color:#fff;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px #123d45aa}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn svg{width:18px;height:18px}
+.device{position:relative}
+.device img{width:100%;filter:drop-shadow(0 30px 30px #123d4540);animation:float 7s ease-in-out infinite}
+.device::after{content:"";position:absolute;inset-inline:14%;top:18%;height:4px;border-radius:4px;background:linear-gradient(90deg,transparent,#ffb02e,#ffd166,transparent);box-shadow:0 0 18px #ffb02e;animation:beam 3.2s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes beam{0%{top:14%;opacity:0}15%{opacity:1}55%{top:34%;opacity:1}70%,100%{top:34%;opacity:0}}
+section{padding:46px 0}
+h2{font-family:TDisplay;font-size:clamp(28px,4vw,38px);line-height:1.2;margin-bottom:6px}
+.sub{font-family:TSans;color:var(--muted);margin-bottom:24px}
+.video{border-radius:24px;overflow:hidden;background:var(--ink);box-shadow:0 30px 60px -30px #123d4588;aspect-ratio:16/9}
+.video video{width:100%;height:100%;display:block}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.link{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.link:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px #123d4566}
+.link .shot{aspect-ratio:16/10;background:#dfeee9 center/cover;border-bottom:1px solid var(--line)}
+.link .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.link .n{font-family:TSans;font-weight:700;color:#9a6d12;font-size:14px}
+.link h3{font-family:TDisplay;font-size:22px;line-height:1.3}
+.link p{font-size:15px;color:var(--muted)}
+.link .go{font-family:TSans;font-weight:700;color:var(--teal);margin-top:auto;padding-top:6px}
+.brief{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.brief div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px}
+.brief b{display:block;font-family:TSans;font-weight:700;color:var(--teal);font-size:14px;margin-bottom:4px}
+.brief p{font-size:16px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.facts div{background:var(--ink);color:#fff;border-radius:20px;padding:20px}
+.facts strong{display:block;font-family:TSans;font-weight:700;font-size:40px;line-height:1.1;color:#ffd38a}
+.facts span{font-size:15px;opacity:.9}
+.downloads{display:flex;flex-wrap:wrap;gap:12px}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.team figure{text-align:center}
+.team img{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;border-radius:50%;background:#d6ebe5;border:3px solid #fff}
+.team figcaption{font-family:TSans;font-weight:700;font-size:15px;margin-top:8px}
+.team small{display:block;font-family:TText;font-weight:400;color:var(--muted);font-size:13px;line-height:1.5}
+footer{padding:30px 0 50px;font-family:TSans;font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:20px}
+@media (max-width:800px){
+  .hero{grid-template-columns:1fr;padding-top:10px}.device{order:-1;max-width:420px;margin:0 auto}
+  .links,.brief,.facts{grid-template-columns:1fr}.team{grid-template-columns:repeat(3,1fr)}
+  section{padding:34px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><img src="assets/logo.webp" alt=""><b>خطاك STEPS</b><span>صفحة المحكّمين</span></header>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">FootGuard · محطة فحص وقائي</div>
+      <h1>خطاك<em>STEPS · FootGuard</em></h1>
+      <p class="lead">محطة فحص وقائي ذكية تكتشف خطر إصابة قدم الحاج قبل أن تحدث.</p>
+      <p class="tag">نفحص · نكتشف · نحمي · نوجّه</p>
+      <div class="cta">
+        <a class="btn" href="#video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>شاهد الفيديو</a>
+        <a class="btn alt" href="index.html?lang=ar#1">العرض التفاعلي</a>
+      </div>
+    </div>
+    <div class="device"><img src="assets/device.webp" alt="محطة خطاك للفحص"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="video">
+    <h2>المشروع في دقيقة</h2>
+    <p class="sub">المشكلة، والدليل، وكيف يعمل الفحص، والنتيجة.</p>
+    <div class="video"><video controls preload="none" poster="assets/og-image.png" src="assets/pitch.mp4" playsinline></video></div>
+  </section>
+
+  <section>
+    <h2>جرّب المشروع</h2>
+    <p class="sub">ثلاثة روابط تكفي لفهم المشروع كاملًا.</p>
+    <div class="links">
+      <a class="link" href="index.html?lang=ar#1"><div class="shot" style="background-image:url(assets/shot-site.webp)"></div><div class="body"><span class="n">01</span><h3>العرض التفاعلي</h3><p>المشكلة والدليل العلمي والحل والجهاز ونموذج العمل، بالعربية والإنجليزية.</p><span class="go">افتح العرض ←</span></div></a>
+      <a class="link" href="https://m7med7.github.io/G0-Steps/#start" target="_blank" rel="noopener"><div class="shot" style="background-image:url(assets/shot-app.webp)"></div><div class="body"><span class="n">02</span><h3>النموذج الأولي للتطبيق</h3><p>رحلة الفحص كاملة: البطاقة، الفحص، الأسئلة، القياس، والنتيجة، ببيانات تجريبية.</p><span class="go">جرّب النموذج ←</span></div></a>
+      <a class="link" href="https://m7med7.github.io/G0-Steps/device.html?lang=ar" target="_blank" rel="noopener"><div class="shot" style="background-image:url(assets/shot-3d.webp)"></div><div class="body"><span class="n">03</span><h3>عارض الجهاز ثلاثي الأبعاد</h3><p>طبقات الجهاز ومكوناته: دوّر النموذج وكبّره واختر أي طبقة.</p><span class="go">استكشف الجهاز ←</span></div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>المشروع في 30 ثانية</h2>
+    <p class="sub">ما المشكلة، وما الحل، ولماذا الآن.</p>
+    <div class="brief">
+      <div><b>المشكلة</b><p>الحاج يمشي مسافات طويلة على أسطح حارة، ونتعامل مع إصابات القدم بعد ظهورها.</p></div>
+      <div><b>الحل</b><p>محطة تجمع التصوير البصري والحراري وقياس الضغط مع الأسئلة الصحية في فحص واحد.</p></div>
+      <div><b>النتيجة</b><p>خريطة مخاطر للقدم وفئة إجراء واضحة وتوصيات وقائية، وإحالة للمختص عند الحاجة.</p></div>
+      <div><b>التميّز</b><p>لا يجمع أي بديل حالي هذه الحساسات مع الفحص السريري في محطة مصممة للحج.</p></div>
+    </div>
+    <div class="facts">
+      <div><strong>60+ كم</strong><span>قد يمشيها الحاج خلال المناسك</span></div>
+      <div><strong><bdi dir="ltr">50–70°C</bdi></strong><span>حرارة الأسطح في مواسم الحج</span></div>
+      <div><strong><bdi dir="ltr">≈ 1.71M</bdi></strong><span>حاج في موسم 2026</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>للتحميل</h2>
+    <p class="sub">ملف واحد يلخّص المشروع للقراءة لاحقًا.</p>
+    <div class="downloads"><a class="btn" href="assets/STEPS-executive-summary.pdf" download>الملخص التنفيذي (PDF)</a></div>
+  </section>
+
+  <section>
+    <h2>الفريق</h2>
+    <p class="sub">خبرات تجمع الطب والصحة العامة والتقنية.</p>
+    <div class="team">
+      <figure><img src="assets/team-aseel-clean.png" alt=""><figcaption>أصيل الصبحي<small>طالب طب، جامعة أم القرى</small></figcaption></figure>
+      <figure><img src="assets/team-ashwaq-clean.png" alt=""><figcaption>أشواق الحسناني<small>طالبة صحة عامة، جامعة أم القرى</small></figcaption></figure>
+      <figure><img src="assets/team-mohammed-clean.png" alt=""><figcaption>محمد الحربي<small>تقنية معلومات وذكاء اصطناعي</small></figcaption></figure>
+      <figure><img src="assets/team-retaj-clean.png" alt=""><figcaption>رتاج الغامدي<small>صحة عامة، جامعة أم القرى</small></figcaption></figure>
+      <figure><img src="assets/team-renad-clean.png" alt=""><figcaption>د. رناد جاد كريم<small>استشارية الصحة العامة وطب المناطق المدارية</small></figcaption></figure>
+    </div>
+  </section>
+
+  <footer>خطاك STEPS · FootGuard — النموذج الأولي يعمل ببيانات تجريبية ولا يحفظ أي بيانات شخصية.</footer>
+</div>
+</body>
+</html>

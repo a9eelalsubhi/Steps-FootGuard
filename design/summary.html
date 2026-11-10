@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>خطاك STEPS — الملخص التنفيذي</title>
+<style>
+@font-face{font-family:TDisplay;src:url(../assets/thmanyahserifdisplay-Bold.woff2);font-weight:700}
+@font-face{font-family:TText;src:url(../assets/thmanyahseriftext-Regular.woff2)}
+@font-face{font-family:TText;src:url(../assets/thmanyahseriftext-Bold.woff2);font-weight:700}
+@font-face{font-family:TSans;src:url(../assets/thmanyahsans-Regular.woff2)}
+@font-face{font-family:TSans;src:url(../assets/thmanyahsans-Bold.woff2);font-weight:700}
+@page{size:A4;margin:0}
+:root{--ink:#123d45;--teal:#087577;--gold:#b98a2c;--muted:#3f6166;--line:#17646c26;--soft:#eef6f3}
+*{box-sizing:border-box;margin:0}
+body{font-family:TText,serif;color:var(--ink);font-size:9.6pt;line-height:1.55}
+.page{width:210mm;height:297mm;padding:14mm 15mm 12mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+.page::before{content:"";position:absolute;inset:0 0 auto;height:62mm;background:linear-gradient(135deg,#e4f3ec,#c4e1df);z-index:0}
+.page>*{position:relative;z-index:1}
+.head{display:flex;align-items:center;gap:12px}
+.head img{width:16mm}
+.head h1{font-family:TDisplay;font-size:30pt;line-height:1}
+.head h1 small{display:block;font-family:TSans;font-weight:700;font-size:10pt;color:var(--teal);letter-spacing:.4px;margin-top:4px}
+.head .doc{margin-inline-start:auto;font-family:TSans;font-size:9pt;color:var(--muted);text-align:left}
+.lead{font-family:TDisplay;font-size:16pt;line-height:1.35;margin:6mm 0 2mm;max-width:118mm}
+.tag{font-family:TSans;color:var(--muted);font-size:10pt}
+.device{position:absolute;left:12mm;top:16mm;width:66mm}
+h2{font-family:TDisplay;font-size:13.5pt;margin:0 0 2mm;display:flex;align-items:center;gap:6px}
+h2 i{font-style:normal;font-family:TSans;font-weight:700;font-size:8.5pt;color:#fff;background:var(--teal);border-radius:10px;padding:1px 7px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:9mm}
+.box{background:var(--soft);border-radius:4mm;padding:3.6mm 4.5mm}
+.box.dark{background:var(--ink);color:#fff}
+.box.dark h2{color:#fff}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:5mm 0 3mm}
+.facts div{border:1px solid var(--line);border-radius:3mm;padding:3mm}
+.facts b{display:block;font-family:TSans;font-weight:700;font-size:17pt;line-height:1.1;color:var(--teal);direction:ltr;text-align:right}
+.facts span{font-size:8.6pt;color:var(--muted);line-height:1.4;display:block;margin-top:1mm}
+ul{padding-inline-start:5mm}
+li{margin-bottom:1mm}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:2mm}
+.steps div{background:#fff;border-radius:3mm;padding:3mm;border:1px solid var(--line)}
+.steps b{font-family:TSans;color:var(--gold);font-size:9pt}
+.steps strong{display:block;font-family:TDisplay;font-size:11pt;margin:1mm 0}
+.steps p{font-size:8.6pt;line-height:1.45}
+.cats{display:flex;flex-wrap:wrap;gap:2mm;margin-top:2mm}
+.cats span{font-family:TSans;font-weight:700;font-size:8.6pt;padding:1mm 3mm;border-radius:4mm}
+.c1{background:#dff3e8;color:#1d7a47}.c2{background:#fbf0d4;color:#8a6410}.c3{background:#fde3d2;color:#a64b12}.c4{background:#fbdcd9;color:#a52a22}.c5{background:#e7ecee;color:#3f5257}
+.note{font-size:8.6pt;color:var(--muted);margin-top:2mm}
+table{width:100%;border-collapse:collapse;font-size:8.8pt;margin-top:2mm}
+th,td{padding:1.4mm 1.6mm;border-bottom:1px solid var(--line);text-align:center}
+th:first-child,td:first-child{text-align:right;font-family:TSans;font-weight:700}
+thead th{font-family:TSans;font-size:8pt;color:var(--muted)}
+.y{color:#1d8a52;font-weight:700}.n{color:#c2372c}
+tr.us td{background:#e3f4ec}
+.status{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:2mm}
+.status div{border-radius:3mm;padding:3mm;font-size:9pt;line-height:1.5}
+.status b{display:block;font-family:TSans;font-size:9.5pt;margin-bottom:1mm}
+.s1{background:#dff3e8}.s2{background:#fbf0d4}.s3{background:#fbe1dd}
+.money{display:flex;gap:4mm;margin-top:2mm}
+.money div{flex:1;background:#fff;border-radius:3mm;padding:2.5mm;border:1px solid var(--line)}
+.money b{font-family:TSans;font-weight:700;font-size:12.5pt;white-space:nowrap;color:var(--gold);direction:ltr;display:block;text-align:right}
+.money span{font-size:8.6pt;color:var(--muted)}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:3mm}
+.links a{display:flex;gap:3mm;align-items:center;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:3mm;padding:2.5mm}
+.links img{width:19mm;height:19mm}
+.links b{font-family:TSans;font-size:9.5pt;display:block}
+.links span{font-size:8.2pt;color:var(--muted);direction:ltr;display:block;word-break:break-all}
+.team{display:flex;flex-wrap:wrap;gap:1.5mm 5mm;font-size:9pt;margin-top:2mm}
+.team b{font-family:TSans}
+.foot{position:absolute;bottom:8mm;inset-inline:15mm;display:flex;justify-content:space-between;font-family:TSans;font-size:8pt;color:var(--muted);border-top:1px solid var(--line);padding-top:2mm}
+.refs{font-size:7.6pt;color:var(--muted);line-height:1.5;direction:ltr;text-align:left;margin-top:2mm}
+</style></head><body>
+
+<div class="page">
+  <img class="device" src="../assets/device.webp" alt="">
+  <div class="head"><img src="../assets/logo.webp" alt=""><h1>خطاك<small>STEPS · FootGuard</small></h1></div>
+  <p class="lead">محطة فحص وقائي ذكية تكتشف خطر إصابة قدم الحاج قبل أن تحدث</p>
+  <p class="tag">نفحص · نكتشف · نحمي · نوجّه — الملخص التنفيذي</p>
+
+  <div class="facts" style="margin-top:9mm">
+    <div><b>60+ km</b><span>قد يمشيها الحاج خلال المناسك</span></div>
+    <div><b>50–70°C</b><span>حرارة الأسطح في مواسم الحج</span></div>
+    <div><b>61.5%</b><span>من إصابات القدم بثور، تليها التقرحات 20.9%</span></div>
+    <div><b>≈ 1.71M</b><span>حاج في موسم 2026</span></div>
+  </div>
+
+  <div class="grid2" style="margin-top:2mm">
+    <div class="box"><h2><i>01</i>المشكلة</h2>
+      <p>معظم شعائر الحج تعتمد على المشي لمسافات طويلة، مع حرارة واحتكاك وضغط متكرر على القدم. الرعاية الحالية تتعامل مع الإصابة بعد ظهور الأعراض، دون فحص وقائي منظم، فيأتي التدخل متأخرًا ويزيد الضغط على الكوادر الصحية. الحجاج المصابون بالسكري وكبار السن وذوو الإصابات السابقة هم الأكثر عرضة.</p></div>
+    <div class="box dark"><h2><i style="background:var(--gold)">02</i>الحل</h2>
+      <p>محطة فحص تجمع <b>التصوير البصري</b> و<b>التصوير الحراري</b> و<b>قياس ضغط باطن القدم</b> مع <b>الأسئلة الصحية</b> و<b>الفحص السريري</b>، وتدمج النتائج في نظام دعم قرار يكتشف الحالات المعرّضة للخطر مبكرًا ويوجّه التدخل المناسب، خلال 60–120 ثانية لكل حاج (هدف تصميمي).</p></div>
+  </div>
+
+  <div class="box" style="margin-top:4mm"><h2><i>03</i>كيف يعمل</h2>
+    <div class="steps">
+      <div><b>01</b><strong>التصوير والفحص الحراري</strong><p>كاميرتان أسفل الزجاج ترصدان الاحمرار والبثور والتقرحات والنقاط الحرارية غير الطبيعية.</p></div>
+      <div><b>02</b><strong>قياس توزيع الضغط</strong><p>منصة مستشعرات تحدد مناطق الضغط المرتفع والإجهاد في باطن القدم.</p></div>
+      <div><b>03</b><strong>التحليل والتوجيه</strong><p>دمج البيانات مع عوامل الخطورة، ثم تقرير بخريطة المخاطر وفئة الإجراء والتوصيات.</p></div>
+    </div>
+    <p style="margin-top:3mm"><b>المخرجات — فئة إجراء لكل حاج:</b></p>
+    <div class="cats"><span class="c1">خطورة منخفضة</span><span class="c2">خطورة متوسطة</span><span class="c3">خطورة مرتفعة</span><span class="c4">أولوية عاجلة</span><span class="c5">تقييم غير مكتمل</span></div>
+    <p class="note">فئات مقترحة تتطلب مراجعة المختص؛ وعند نقص الفحص أو ضعف موثوقية البيانات لا تُسجَّل «خطورة منخفضة». الجهاز يدعم القرار ولا يشخّص.</p>
+  </div>
+
+  <div class="grid2" style="margin-top:4mm">
+    <div class="box"><h2><i>04</i>الأساس العلمي</h2>
+      <ul><li><b>التصوير الحراري:</b> فرق أكثر من 2.2°C بين القدمين مؤشر مبكر على خطر التقرح.</li>
+      <li><b>ضغط باطن القدم:</b> يحدد المناطق الأكثر عرضة للإجهاد والإصابة.</li>
+      <li><b>الرؤية الحاسوبية:</b> تساعد في اكتشاف الجروح والاحمرار والتقرحات وتحديد مواقعها.</li></ul></div>
+    <div class="box"><h2><i>05</i>لماذا خطاك</h2>
+      <p>لا يجمع أي من البدائل الحالية (TF Scan، Podimetrics SmartMat، Novel، Tekscan) التصوير الحراري والبصري وقياس الضغط مع الإرشاد والفحص السريري في محطة واحدة مصممة لبيئة الحج.</p>
+      <p class="note">قدرات خطاك وفق التصميم المقترح؛ الذكاء الاصطناعي ضمن التطوير المستقبلي.</p></div>
+  </div>
+  <div class="foot"><span>خطاك STEPS · FootGuard</span><span>1 / 2</span></div>
+</div>
+
+<div class="page" style="padding-top:11mm">
+  <div class="head"><img src="../assets/logo.webp" alt="" style="width:11mm"><h1 style="font-size:20pt">خطاك<small>الملخص التنفيذي</small></h1></div>
+
+  <div class="box" style="margin-top:6mm"><h2><i>06</i>أين وصل النموذج الأولي</h2>
+    <div class="status">
+      <div class="s1"><b>أُنجز وعُرض</b>نموذج برمجي لمحطة الفحص يعمل ببيانات تجريبية من البطاقة حتى النتيجة · منطق قواعد يحدد فئة الإجراء · مكونات العتاد مختارة ومسعّرة (299 ريال) مع مخطط التوصيل · نموذج ثلاثي الأبعاد تفاعلي.</div>
+      <div class="s2"><b>تقديري / هدف تصميمي</b>مدة الفحص 60–120 ثانية · أقصى وزن 150 كجم · 100–200 فحص يوميًا للجهاز · تكلفة تصنيع ≈ 300 ريال.</div>
+      <div class="s3"><b>لم يُختبر بعد</b>دقة المستشعرات وتكرار القياس على أقدام حقيقية · دقة التصنيف مقارنة بالفحص السريري · الأداء في حرارة وازدحام المشاعر.</div>
+    </div></div>
+
+  <div class="grid2" style="margin-top:3.5mm">
+    <div class="box"><h2><i>07</i>السوق</h2>
+      <table><thead><tr><th></th><th>النطاق</th><th>القيمة</th></tr></thead><tbody>
+        <tr><td>TAM</td><td>≈ 16.94M حاج ومعتمر</td><td dir="ltr">7.5M SAR</td></tr>
+        <tr><td>SAM</td><td>≈ 1.71M حاج، أولوية للأكثر عرضة</td><td dir="ltr">2.25M SAR</td></tr>
+        <tr><td>SOM</td><td>10,000–50,000 فحص في الموسم</td><td dir="ltr">225k SAR</td></tr></tbody></table>
+      <p class="note">أماكن النشر: المسجد الحرام، نقاط التجمع ومحطات الحافلات، المراكز الصحية في المشاعر، منى وعرفة.</p></div>
+    <div class="box"><h2><i>08</i>نموذج العمل</h2>
+      <p>نبيع الجهاز للجهات المشغّلة للرعاية: الجهات الحكومية والصحية، والمستشفيات، ومشغلي خدمات الحج والعمرة. ونقدّم التركيب والتدريب والدعم.</p>
+      <div class="money"><div><b>1,500 SAR</b><span>سعر مقترح للوحدة</span></div><div><b>500 SAR</b><span>اشتراك شهري بديل</span></div><div><b>≈ 300 SAR</b><span>تكلفة تصنيع تقديرية</span></div></div></div>
+  </div>
+
+  <div class="box" style="margin-top:3.5mm"><h2><i>09</i>الخطوات القادمة</h2>
+    <ul><li><b>تصنيع النموذج واختبار المستشعرات:</b> دقة الضغط والحرارة وتكرار القياس، والانتقال إلى مصفوفة Velostat.</li>
+    <li><b>التحقق السريري:</b> مقارنة النتائج بالفحص السريري ومراجعة فئات الإجراء مع المختصين.</li>
+    <li><b>نموذج ذكاء اصطناعي متحقق منه</b>، ثم <b>إنترنت الأشياء</b> لمراقبة الأجهزة، و<b>التشغيل بالطاقة الشمسية</b> دعمًا لرؤية 2030.</li></ul></div>
+
+  <div class="box" style="margin-top:3.5mm"><h2><i>10</i>جرّب المشروع</h2>
+    <div class="links">
+      <a href="https://steps-footguard-motion.doctors-and-hci.chatgpt.site/?lang=ar#1"><img src="qr-site.png" alt=""><div><b>العرض التفاعلي</b><span>steps-footguard-motion…chatgpt.site</span></div></a>
+      <a href="https://m7med7.github.io/G0-Steps/#start"><img src="qr-app.png" alt=""><div><b>النموذج الأولي</b><span>m7med7.github.io/G0-Steps</span></div></a>
+      <a href="https://m7med7.github.io/G0-Steps/device.html?lang=ar"><img src="qr-3d.png" alt=""><div><b>عارض الجهاز 3D</b><span>m7med7.github.io/G0-Steps/device</span></div></a>
+    </div></div>
+
+  <div class="box" style="margin-top:3.5mm"><h2><i>11</i>الفريق</h2>
+    <div class="team"><span><b>أصيل الصبحي</b> — طب، جامعة أم القرى</span><span><b>أشواق الحسناني</b> — صحة عامة، جامعة أم القرى</span><span><b>محمد الحربي</b> — تقنية معلومات وذكاء اصطناعي</span><span><b>رتاج الغامدي</b> — صحة عامة، جامعة أم القرى</span><span><b>د. رناد جاد كريم</b> — استشارية الصحة العامة وطب المناطق المدارية</span></div></div>
+
+  <p class="refs">Almqaiti et al., 2024 (Foot injuries during Hajj 2023) · Lavery et al., 2007 (Foot temperature monitoring) · Castro-Martins et al., 2024 (Plantar pressure review) · Alhasson &amp; Alharbi, 2025 (Computer vision for diabetic feet) · GASTAT Hajj Statistics 2026 · GASTAT Umrah Statistics Q1 2026</p>
+  <div class="foot"><span>النموذج الأولي يعمل ببيانات تجريبية ولا يحفظ أي بيانات شخصية</span><span>2 / 2</span></div>
+</div>
+</body></html>
