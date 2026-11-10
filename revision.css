@@ -58,7 +58,7 @@ html[lang="ar"] .evidence-v2 > * { direction: rtl; }
 .risk-v2 .heat-scale { margin-top: 14px; direction: ltr; }
 .science-v2 { gap: 35px; margin-top: 15px; grid-template-columns: 1fr 1.4fr; }
 .science-v2 .science-visual { height: 500px; padding: 20px 14px; gap: 17px; border: 1px solid rgba(176, 202, 188, 0.5); }
-.science-v2 .science-visual > img { width: 49%; height: 450px; mix-blend-mode: multiply; }
+.science-v2 .science-visual > img { width: 49%; height: 450px; mix-blend-mode: normal; }
 .science-v2 .injury-list { padding-inline-end: 0px; }
 .science-v2 .injury-list h3 { font-size: 18px; line-height: 1.4; margin-bottom: 15px; }
 .science-v2 .injury-list p { font-size: 14px; line-height: 1.25; padding: 10px 0px; gap: 5px; }
@@ -209,9 +209,9 @@ html[lang="ar"] .how-top > * { direction: rtl; }
 .market-v2 .deployment-sites p span { font-size: 17px; line-height: 1.4; }
 .vision-line { font-size: 18px; line-height: 1.5; position: absolute; inset-inline: 64px; bottom: 94px; color: rgb(33, 108, 112); border-top: 1px solid var(--line); padding-top: 12px; text-align: center; }
 html[lang="ar"] .market-v2 { grid-template-columns: 535px 1fr 250px; }
-.scene-20 .price-main > strong { font-size: 105px; }
-.scene-20 .unit-economics b { font-size: 34px; }
-.scene-20 .unit-economics span { font-size: 17px; }
+.scene-21 .price-main > strong { font-size: 105px; }
+.scene-21 .unit-economics b { font-size: 34px; }
+.scene-21 .unit-economics span { font-size: 17px; }
 .roadmap-v2 { gap: 35px; margin-top: 26px; }
 .roadmap-v2 .roadmap-item { min-height: 532px; padding: 25px 31px; border-top-width: 4px; overflow: hidden; }
 .roadmap-illustration { height: 185px; width: 185px; margin: 8px auto 5px; }
@@ -246,3 +246,27 @@ html[lang="en"] .market-tier-head > small { font-size: 11px; }
 html[lang="en"] .roadmap-v2 .roadmap-item > p { font-size: 22px; }
 html[lang="en"] .roadmap-v2 .roadmap-foot { font-size: 19px; }
 .component-labels li::before{display:none}
+
+/* Five proposed action categories — synchronized with protocol draft. */
+.outputs-action .result-browser{height:300px;min-height:0;overflow:hidden;padding:0;background:transparent;border:0;box-shadow:none}.outputs-action .result-browser>.action-result-image{display:block;width:100%;height:300px;object-fit:contain}.action-categories{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:18px}.action-category{grid-column:span 2;min-height:58px;padding:9px 8px;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--action-bg);border:1px solid var(--action-border);color:var(--action-color);border-radius:9px;text-align:center;font-size:19px;font-weight:700;line-height:1.2}.action-category:nth-child(n+4){grid-column:span 3}.action-category .icon{width:23px;height:23px;flex-shrink:0}.action-category small{font-size:10px;display:block;font-weight:500;margin-top:5px}.action-category-note{font-size:14px;line-height:1.55;color:var(--muted);margin-top:13px}.action-category-note a{text-decoration:underline;color:var(--teal);white-space:nowrap}html[lang=en] .action-category{font-size:17px}html[lang=en] .action-category-note{font-size:13px}.outputs-action .output-item p{font-size:19px;line-height:1.5}.outputs-action .output-item h2{font-size:26px}
+
+/* Interactive 3D explorer, hardware scene. */
+.scene-9 .wiring-vector{height:180px;margin:10px auto 8px}.scene-9 .original-wiring>img{height:115px}.device-explorer-card{display:grid;grid-template-columns:112px minmax(0,1fr);gap:15px;align-items:center;padding:12px 14px;margin-top:13px;border:1px solid #94bcb4;border-radius:13px;background:linear-gradient(115deg,#eff5e9e8,#d8eae3d9);box-shadow:0 8px 24px #1c55500a;direction:ltr}.device-explorer-window{display:block;position:relative;height:106px;border:1px solid #9cbeb6;border-radius:9px;overflow:hidden;background:radial-gradient(ellipse at center,#cfebe2,#a9cdcb);box-shadow:0 4px 10px #164c4b12}.device-window-bar{height:17px;display:flex;align-items:center;gap:3px;padding:0 7px;background:#eff7ee;border-bottom:1px solid #abc8bf}.device-window-bar i{width:3px;height:3px;border-radius:50%;background:#9ab7ae}.device-window-bar b{margin-left:auto;font-size:9px;color:#087577;letter-spacing:1px}.device-explorer-window>img{display:block;width:100%;height:87px;object-fit:contain}.device-window-orbit{position:absolute;bottom:5px;right:5px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:#edf6e9e6;color:#087577;font-size:19px;line-height:1}.device-explorer-copy{direction:ltr;text-align:left}.device-explorer-copy h3{font-size:20px;line-height:1.2;margin:0;color:var(--ink)}.device-explorer-copy p{font-size:14px;color:var(--muted);line-height:1.45;margin:5px 0 8px}.device-explorer-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:7px;padding:8px 12px;background:#087577;color:#fff;font-size:14px;font-weight:700;line-height:1.2;transition:background .18s,transform .18s}.device-explorer-button:hover{background:#075e61;transform:translateY(-1px)}.device-explorer-button:focus-visible,.device-explorer-window:focus-visible{outline:3px solid #d5a647;outline-offset:3px}.device-explorer-button .icon{width:14px;height:14px;filter:brightness(0) invert(1)}html[lang=ar] .device-explorer-copy{direction:rtl;text-align:right}html[lang=ar] .device-explorer-card{grid-template-columns:minmax(0,1fr) 112px}html[lang=ar] .device-explorer-window{grid-column:2;grid-row:1}html[lang=ar] .device-explorer-copy{grid-column:1;grid-row:1}
+
+/* MEDATHON content alignment: preserve the original 22-scene presentation. */
+.team-v2 .person:last-child p { white-space: pre-line; }
+.scene-5 .scene-heading h1 { font-size: 48px; }
+html[lang="en"] .scene-5 .scene-heading h1 { font-size: 43px; }
+.scene-21 .pricing-layout { gap: 55px; }
+.scene-21 .cost-table h2 { padding: 13px 25px; }
+.scene-21 .cost-table > div { padding: 11px 25px; }
+.scene-21 .pricing-product > img { height: 235px; }
+.scene-21 .price-main > strong { font-size: 78px; }
+.scene-21 .unit-economics { margin-top: 18px; padding-top: 17px; }
+.business-channels { margin-top: 22px; display: flex; align-items: center; gap: 35px; padding: 17px 24px; background: #eff5e9bd; border: 1px solid #99bdb1; border-radius: 12px; }
+.channels-heading { display: flex; align-items: center; gap: 15px; flex-shrink: 0; }
+.channels-heading > .icon { width: 34px; height: 34px; }
+.channels-heading h2 { font-size: 25px; color: var(--teal); line-height: 1.3; }
+.channels-heading span { display: block; font-size: 16px; color: var(--muted); margin-top: 2px; }
+.business-channels > p { font-size: 22px; line-height: 1.5; border-inline-start: 1px solid var(--line); padding-inline-start: 30px; }
+html[lang="en"] .business-channels > p { font-size: 20px; }
