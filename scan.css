@@ -65,3 +65,16 @@ body.phone #stage .dt-feet{width:60%}
 .route-line{fill:none;stroke:#ffd166;stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-width:3.5;stroke-linecap:round;filter:drop-shadow(0 0 4px #0009)}
 .route-stop{position:absolute;transform:translate(-50%,-140%);font-size:13px;font-weight:700;color:#fff;background:#123d45cc;padding:2px 9px;border-radius:12px;white-space:nowrap}
 .route-walker{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#ffd166;box-shadow:0 0 0 4px #ffd16655,0 0 14px #ffb02e}
+
+/* dark theme: the card follows the site's dark surfaces instead of staying light */
+[data-theme="dark"] .scan-card{background:#1b373cf2;border-color:var(--dark-border);box-shadow:0 24px 50px -18px #000c,0 1px 0 #ffffff14 inset}
+[data-theme="dark"] .scan-card-head b{color:var(--ink)}
+[data-theme="dark"] .scan-feet{background:#0f262b}
+[data-theme="dark"] .scan-modes span{background:var(--dark-raised);color:var(--muted)}
+[data-theme="dark"] .scan-modes span.on{background:var(--teal);color:#0f262b}
+[data-theme="dark"] .scan-modes span[data-mode="result"].on{background:#e0675a;color:#fff}
+[data-theme="dark"] .scan-card.show-result .scan-result{background:#3a2226;border-color:#e1948655}
+[data-theme="dark"] .scan-result b,[data-theme="dark"] .scan-result em{color:#ffb4a6}
+[data-theme="dark"] .scan-result span{color:var(--ink)}
+[data-theme="dark"] .route-stop{background:#0f262bd9}
+[data-theme="dark"] .dp-line{stroke:#8ac8bb40}
